@@ -19,12 +19,16 @@
             <div class="navHeader">
                 <nav>
                     <a href="{{ path('app_home') }}">Accueil</a>
-                    <a href="{{ path('app_home') }}">Test1</a>
-                    <a href="{{ path('app_home') }}">Test2</a>
+                    <a href="{{ path('app_home') }}">Qui sommes-nous ?</a>
+                    <a href="{{ path('app_home') }}">Nous contacter</a>
                 </nav>
             </div>
             <div class="headerUser">
-                <a href="{{ path('app_login') }}">Se connecter</a>
+                {% if app.user %}
+                    <a href="{{ path('app_profile') }}">Mon compte</a>
+                {% else %}
+                    <a href="{{ path('app_login') }}">Se connecter</a>
+                {% endif %}
             </div>
 
         </header>
@@ -32,6 +36,9 @@
             {% block body %}{% endblock %}
         </main>
         
+        <footer>
+        
+        </footer>
         
     </body>
 </html>

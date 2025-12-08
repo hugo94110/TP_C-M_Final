@@ -4,6 +4,22 @@
 
 {% block body %}
 
-<p>home</p>
+<div class="articlesContainer">
+    {% if articles is defined and articles is not empty %}
+        {% for article in articles %}
+            <a class="article" href="">
+                <div class="articleImg">
+                    <img src="{{ article.imageLink }}" alt="{{ article.description }}">
+                </div>
+                <div class="articleDesc">
+                    <p>{{ article.description }}</p>
+                    <p>{{ article.price }}€</p>
+                </div>
+            </a>
+        {% endfor %}
+    {% else %}
+        <p>Aucun produit disponible pour le moment.</p>
+    {% endif %}
+</div>
 
 {% endblock %}
