@@ -1,13 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Accueil{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+{% endblock %}
+
+{% block title %}Vêtements Avant-Gardistes{% endblock %}
 
 {% block body %}
 
 <div class="articlesContainer">
     {% if articles is defined and articles is not empty %}
         {% for article in articles %}
-            <a class="article" href="">
+            <a class="article" href="{{ path('app_article_show', {'id': article.id}) }}">
                 <div class="articleImg">
                     <img src="{{ article.imageLink }}" alt="{{ article.description }}">
                 </div>

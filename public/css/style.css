@@ -92,77 +92,7 @@ header {
 
 .headerUser a:hover {
     background-color: #000;
+    border: 1px solid #000;
     color: #fff;
     transition: all 0.4s ease-out;
-}
-
-
-/* article */
-
-.articlesContainer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    /* margin-bottom: 40px; */
-    padding: 0 15px;
-    max-width: 1200px;
-    margin: 0 auto 0 auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.article {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #ffffff;
-    /* border: 1px solid black; */
-    border-radius: 0px;
-    width: 100%;
-    padding: 8px;
-    max-width: 250px;
-    justify-self: center;
-    text-decoration: none;
-}
-
-.article:hover p {
-    text-decoration: underline;
-}
-
-.article p {
-    font-size: 16px;
-    text-align: center;
-    margin: 5px 0 0 0;
-    padding: 0 5px;
-    width: 100%;
-    line-height: 1.4;
-}
-
-.articleImg {
-    text-align: center;
-    width: 100%;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 0;
-    /* border-bottom: 1px solid black; */
-    /* margin-bottom: 10px; */
-}
-
-.articleImg img {
-    max-width: 95%;
-    max-height: 95%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    object-position: center;
-}
-
-.articleDesc p {
-    margin-top: 0;
-    font-size: 15px;
-    color: black;
-    text-align: left;
 }

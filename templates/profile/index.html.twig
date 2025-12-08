@@ -1,12 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}Mon compte{% endblock %}
 
 {% block body %}
 
 {% if app.user %}
     <p>Username : {{ app.user.username }}</p>
     <p>Email : {{ app.user.email }}</p>
+    <p>Roles : {{ app.user.roles|join(', ') }}</p>
     <p>Password : {{ app.user.password }}</p>
     <a href="{{ path('app_logout') }}">logout</a>
     <form method="post" action="{{ path('app_delete_user') }}" >
