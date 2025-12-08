@@ -4,15 +4,6 @@
 
 {% block body %}
 
-{% if app.user %}
-    <p>Username : {{ app.user.username }}</p>
-    <p>Email : {{ app.user.email }}</p>
-    <p>Password : {{ app.user.password }}</p>
-    <a href="{{ path('app_logout') }}">logout</a>
-{% else %}
-    <p>pas connecté</p>
-    <a href="{{ path('app_login') }}">login</a>
-    <a href="{{ path('app_register') }}">register</a>
-{% endif %}
+<p>home</p>
 
 {% endblock %}

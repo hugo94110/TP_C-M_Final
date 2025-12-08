@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Geist", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    background: transparent;
+    padding: 15px 70px 15px 70px;
+    color: #000;
+    border-bottom: 1px solid #e0e0e0;
+    backdrop-filter: blur(50px);
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+}
+
+.navHeader {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 0px;
+    width: auto;
+}
+
+.navHeader nav {
+    display: flex;
+    gap: 20px;
+}
+
+.navHeader a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navHeader nav:hover a {
+    color: #8a8a8a;
+}
+
+.navHeader nav a:hover {
+    color: #000;
+    transition: all 0.2s ease-out;
+}
+
+.headerUser {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 0px;
+    width: auto;
+}
+
+.headerUser a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+}
+
+.headerUser a:hover {
+    background-color: #000;
+    color: #fff;
+    transition: all 0.4s ease-out;
+}

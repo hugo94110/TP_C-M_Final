@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Attribute\Route;
+use App\Repository\UserRepository;
 
 class RegistrationController extends AbstractController
 {
@@ -40,5 +41,21 @@ class RegistrationController extends AbstractController
         return $this->render('registration/register.html.twig', [
             'registrationForm' => $form,
         ]);
+    }
+
+    #[Route('/profile/delete', name: 'app_delete_user', methods: ['POST'])]
+    public function deleteUser(EntityManagerInterface $entityManager, Security $security): Response {
+        $user = $this->getUser();
+        
+        if (!$user) {
+            throw $this->createAccessDeniedException();
+        }
+        
+        $entityManager->remove($user);
+        $entityManager->flush();
+        $security->logout(false);
+        
+        
+        return $this->redirectToRoute('app_home');
     }
 }
