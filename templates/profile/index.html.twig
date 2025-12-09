@@ -2,14 +2,40 @@
 
 {% block title %}Mon compte{% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/account.css') }}">
+{% endblock %}
+
 {% block body %}
 
-<p>Username : {{ app.user.username }}</p>
-<p>Email : {{ app.user.email }}</p>
-<p>Password : {{ app.user.password }}</p>
-<a href="{{ path('app_logout') }}">logout</a>
-<form method="post" action="{{ path('app_delete_user') }}" >
-    <button type="submit">supp compte</button>
+
+<form class="formContainer" method="post">
+
+    <div class="accountTitleContainer">
+        <h1 class="accountTitle">Mon compte</h1>
+    </div>
+
+    <div class="form__group field">
+        <input type="text" class="form__field" placeholder="Nom d'utilisateur" name="username" id="inputUsername" autocomplete="username" value="{{ app.user.username }}" required>
+        <label for="inputUsername" class="form__label">Nom d'utilisateur</label>
+    </div>
+
+    <div class="form__group field">
+        <input type="email" class="form__field" placeholder="Email" name="email" id="inputEmail" autocomplete="email" value="{{ app.user.email }}" required>
+        <label for="inputEmail" class="form__label">Email</label>
+    </div>
+
+    <input type="hidden" name="_token" value="{{ csrf_token('update_profile') }}">
+    <button type="submit" class="profileButton">Enregister</button>
+
+
+</form>
+
+<form method="post" class="formContainer" action="{{ path('app_delete_user') }}" onsubmit="return confirm('Voulez-vous vraiment supprimer votre compte ?');" style="margin-top: 0;">
+    <div class="moreBtnContainer">
+        <a href="{{ path('app_logout') }}">Se déconnecter</a>
+        <button class="deleteAccountButton" type="submit">Supprimer mon compte</button>
+    </div>
 </form>
 
 

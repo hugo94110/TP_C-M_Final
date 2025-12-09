@@ -14,15 +14,27 @@
         <h1 class="accountTitle">Nous contacter</h1>
     </div>
 
-    <div class="form__group field">
-        <input type="text" class="form__field" placeholder="Nom d'utilisateur" name="username" autocomplete="username" required>
-        <label for="username" class="form__label">Nom d'utilisateur</label>
-    </div>
+    {% if app.user %}
+        <div class="form__group field">
+            <input type="text" class="form__field" placeholder="Nom d'utilisateur" name="username" value="{{ app.user.username }}" autocomplete="username" required>
+            <label for="username" class="form__label">Nom d'utilisateur</label>
+        </div>
 
-    <div class="form__group field">
-        <input type="email" class="form__field" placeholder="Email" name="email" autocomplete="email" required>
-        <label for="email" class="form__label">Email</label>
-    </div>
+        <div class="form__group field">
+            <input type="email" class="form__field" placeholder="Email" name="email" value="{{ app.user.email }}" autocomplete="email" required>
+            <label for="email" class="form__label">Email</label>
+        </div>
+    {% else %}
+        <div class="form__group field">
+            <input type="text" class="form__field" placeholder="Nom d'utilisateur" name="username" autocomplete="username" required>
+            <label for="username" class="form__label">Nom d'utilisateur</label>
+        </div>
+
+        <div class="form__group field">
+            <input type="email" class="form__field" placeholder="Email" name="email" autocomplete="email" required>
+            <label for="email" class="form__label">Email</label>
+        </div>
+    {% endif %}
 
     <div class="form__group field">
         <textarea id="message" class="form__field" name="message" rows="1" placeholder="Votre demande" required></textarea>

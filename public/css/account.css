@@ -81,7 +81,7 @@
     font-weight: 600;
 }
 
-.createAccountBtn, .loginBtn, .contactButton {
+.loginBtn, .contactButton, .profileButton {
     width: 100%;
     padding: 12px 10px;
     margin-top: 5px;
@@ -94,7 +94,7 @@
     text-transform: uppercase;
 }
 
-.createAccountBtn:hover, .loginBtn:hover, .contactButton:hover {
+.loginBtn:hover, .contactButton:hover, .profileButton:hover {
     background-color: black;
     color: #fff;
     border: 1px solid black;
@@ -166,6 +166,20 @@
 
 .formContainer textarea {
     resize: none;
+}
+
+.deleteAccountButton {
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.deleteAccountButton:hover {
+    color: #5c5c5c;
 }
 
 
