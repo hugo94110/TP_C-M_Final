@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -94,5 +96,5 @@ header {
     background-color: #000;
     border: 1px solid #000;
     color: #fff;
-    transition: all 0.4s ease-out;
+    transition: all 0.3s ease;
 }

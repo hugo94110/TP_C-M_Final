@@ -9,43 +9,29 @@
 {% block body %}
 
     <div class="articleShow">
-        <img src="{{ article.imageLink }}" alt="{{ article.description }}">
-        <div class="articleInfo">
-            <div class="articleInfoText">
-                <h2>{{ article.description }}</h2>
-                <h3>{{ article.price }}€</h3>
-            </div>
-            
-            <div class="articleInfoBtn">
-                <a href="{{ path('app_home') }}">back to list</a>
-                {% if is_granted('ROLE_ADMIN') %}
-                    <a href="{{ path('app_article_edit', {'id': article.id}) }}">edit</a>
-                    <!-- {{ include('article/_delete_form.html.twig') }} -->
-                {% endif %}
-            </div>
-        </div>
-    </div>
 
-    <!-- <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ article.id }}</td>
-            </tr>
-            <tr>
-                <th>Image_link</th>
-                <td>{{ article.imageLink }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ article.description }}</td>
-            </tr>
-            <tr>
-                <th>Price</th>
-                <td>{{ article.price }}</td>
-            </tr>
-        </tbody>
-    </table> -->
+        <div class="articleInfo">
+            <h1>{{ article.description }}</h1>
+            <h2>{{ article.price }}€</h2>
+        </div>
+
+        <div class="articleImg">
+            <img src="{{ article.imageLink }}" alt="{{ article.description }}">
+        </div>
+        
+        <div class="articleBtn">
+            <!-- <h3>Code produit : {{ article.id}}</h3> -->
+            <div class="contactButton">Nous contacter</div>
+
+
+            <a href="{{ path('app_home') }}">Retour</a>
+            {% if is_granted('ROLE_ADMIN') %}
+                <a href="{{ path('app_article_edit', {'id': article.id}) }}">edit</a>
+                {{ include('article/_delete_form.html.twig') }}
+            {% endif %}
+        </div>
+        
+    </div>
 
 
 {% endblock %}

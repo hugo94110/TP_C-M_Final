@@ -1,9 +1,14 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/account.css') }}">
+{% endblock %}
+
 {% block title %}Se connecter{% endblock %}
 
 {% block body %}
-<form method="post">
+
+<!-- <form method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -33,5 +38,47 @@
     <button class="btn btn-lg btn-primary" type="submit">
         Sign in
     </button>
+</form> -->
+
+<form class="loginAccount" method="post">
+
+    <div class="accountTitleContainer">
+        <h1 class="accountTitle">Se connecter</h1>
+    </div>
+
+
+    <div class="form__group field">
+        <input type="text" class="form__field" placeholder="Nom d'utilisateur" name="username" id="inputUsername" autocomplete="username" required autofocus>
+        <label for="inputUsername" class="form__label">Nom d'utilisateur</label>
+    </div>
+
+    <div class="form__group field">
+        <input type="password" class="form__field" placeholder="Mot de passe" name="password" id="inputPassword" autocomplete="current-password" required>
+        <input type="hidden" name="_csrf_token" data-controller="csrf-protection" value="{{ csrf_token('authenticate') }}">
+        <label for="inputPassword" class="form__label">Mot de passe</label>
+    </div>
+
+    <div class="checkbox-wrapper-21">
+        <label class="control control--checkbox">
+            Se souvenir de moi
+            <input type="checkbox" name="_remember_me">
+            <div class="control__indicator"></div>
+        </label>
+    </div>
+
+    <button type="submit" class="loginBtn">Se connecter</button>
+
+    <div class="moreBtnContainer">
+        <a href="{{ path('app_register') }}" class="createAccountBtnLink">Créer un compte</a>
+        <a href="{{ path('app_forgot_password_request') }}" class="forgotPasswordBtnLink">Mot de passe oublié ?</a>
+    </div>
+    
+    {% if error %}
+        <div class="loginErrorAlert">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    <p class="accountPolicy">En poursuivant, vous acceptez la <a href="#">politique de confidentialité</a> et les <a href="#">conditions générales de vente</a></p>
+
 </form>
+
 {% endblock %}

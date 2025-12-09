@@ -1,0 +1,227 @@
+/* https://uiverse.io/mrhyddenn/fluffy-bird-66 */
+.form__group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    max-width: 320px;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: 0;
+    font-size: 14px;
+    color: #000;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 14px;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 14px;
+    color: black;
+    pointer-events: none;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 600;
+    border-width: 2px;
+    border-image: black;
+    border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+}
+
+.form__field:required, .form__field:invalid {
+    box-shadow: none;
+}
+
+.createAccount .form__group, .loginAccount .form__group {
+    margin: 10px 0;
+}
+
+
+
+
+.accountTitleContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.accountTitle {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.createAccountBtn, .loginBtn {
+    width: 320px;
+    padding: 12px 10px;
+    margin-top: 5px;
+    background-color: #fff;
+    color: black;
+    border: 1px solid black;
+    border-radius: 0px;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.createAccountBtn:hover, .loginBtn:hover {
+    background-color: black;
+    color: #fff;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+}
+
+.moreBtnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+
+.moreBtnContainer a {
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+}
+
+.moreBtnContainer a:hover {
+    color: #5c5c5c;
+}
+
+.accountPolicy {
+    font-size: 13px;
+    color: black;
+    max-width: 320px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.accountPolicy a {
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+}
+
+.accountPolicy a:hover {
+    color: #5c5c5c;
+}
+
+.loginErrorAlert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.loginAccount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
+/* https://getcssscan.com/css-checkboxes-examples */
+.checkbox-wrapper-21 .control {
+    display: block;
+    position: relative;
+    padding-left: 22px;
+    font-size: 13px;
+    margin-top: 10px;
+    /* background-color: red; */
+}
+.checkbox-wrapper-21 .control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.checkbox-wrapper-21 .control__indicator {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+}
+.checkbox-wrapper-21 .control:hover input ~ .control__indicator,
+.checkbox-wrapper-21 .control input:focus ~ .control__indicator {
+    border: 1px solid #5c5c5c;
+}
+.checkbox-wrapper-21 .control input:checked ~ .control__indicator {
+    background: #000;
+    border: 1px solid #000;
+}
+.checkbox-wrapper-21 .control:hover input:not([disabled]):checked ~ .control__indicator,
+.checkbox-wrapper-21 .control input:checked:focus ~ .control__indicator {
+    background: #000;
+    border: 1px solid #000;
+}
+.checkbox-wrapper-21 .control input:disabled ~ .control__indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.checkbox-wrapper-21 .control__indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+.checkbox-wrapper-21 .control input:checked ~ .control__indicator:after {
+    display: block;
+}
+.checkbox-wrapper-21 .control--checkbox .control__indicator:after {
+    left: 5px;
+    top: 2px;
+    width: 3px;
+    height: 6px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.checkbox-wrapper-21 .control--checkbox input:disabled ~ .control__indicator:after {
+    border-color: #7b7b7b;
+}
