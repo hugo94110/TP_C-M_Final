@@ -72,12 +72,12 @@
         <a href="{{ path('app_register') }}" class="createAccountBtnLink">Créer un compte</a>
         <a href="{{ path('app_forgot_password_request') }}" class="forgotPasswordBtnLink">Mot de passe oublié ?</a>
     </div>
-    
+
     {% if error %}
         <div class="loginErrorAlert">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
-    <p class="accountPolicy">En poursuivant, vous acceptez la <a href="#">politique de confidentialité</a> et les <a href="#">conditions générales de vente</a></p>
+    <p class="accountPolicy">En poursuivant, vous acceptez la <a href="{{ path('app_privacy') }}">politique de confidentialité</a> et les <a href="{{ path('app_cgv') }}">conditions générales de vente</a></p>
 
 </form>
 

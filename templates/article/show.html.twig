@@ -21,10 +21,10 @@
         
         <div class="articleBtn">
             <!-- <h3>Code produit : {{ article.id}}</h3> -->
-            <div class="contactButton">Nous contacter</div>
+            <div class="contactButton">Faire une demande</div>
 
 
-            <a href="{{ path('app_home') }}">Retour</a>
+            <!-- <a href="{{ path('app_home') }}">Retour</a> -->
             {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{ path('app_article_edit', {'id': article.id}) }}">edit</a>
                 {{ include('article/_delete_form.html.twig') }}
