@@ -80,6 +80,28 @@
     color: #5c5c5c;
 }
 
+.articleBtn .btn {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.articleBtn .btn:hover {
+    color: #5c5c5c;
+}
+
+.adminBtnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
 .contactButton {
     margin-bottom: 5px;
     padding: 10px 20px;
@@ -91,16 +113,15 @@
     border-radius: 2px;
     cursor: pointer;
     text-align: center;
+    text-decoration: none;
 }
 
-.contactButton:hover {
+.articleBtn .contactButton:hover {
     background-color: #000;
     color: #fff;
     border: 1px solid #000;
     transition: all 0.3s ease;
 }
-
-
 
 
 

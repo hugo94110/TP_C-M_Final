@@ -21,14 +21,17 @@
         
         <div class="articleBtn">
             <!-- <h3>Code produit : {{ article.id}}</h3> -->
-            <div class="contactButton">Faire une demande</div>
+            <a class="contactButton" href="{{ path('app_contact') }}">Faire une demande</a>
 
 
             <!-- <a href="{{ path('app_home') }}">Retour</a> -->
-            {% if is_granted('ROLE_ADMIN') %}
-                <a href="{{ path('app_article_edit', {'id': article.id}) }}">edit</a>
-                {{ include('article/_delete_form.html.twig') }}
-            {% endif %}
+            
+            <div class="adminBtnContainer">
+                {% if is_granted('ROLE_ADMIN') %}
+                    <a href="{{ path('app_article_edit', {'id': article.id}) }}">Modifier</a>
+                    {{ include('article/_delete_form.html.twig') }}
+                {% endif %}
+            </div>
         </div>
         
     </div>

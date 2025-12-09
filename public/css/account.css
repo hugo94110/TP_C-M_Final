@@ -3,7 +3,8 @@
     position: relative;
     padding: 20px 0 0;
     width: 100%;
-    max-width: 320px;
+    max-width: 400px;
+    margin-top: 10px;
 }
 
 .form__field {
@@ -80,8 +81,8 @@
     font-weight: 600;
 }
 
-.createAccountBtn, .loginBtn {
-    width: 320px;
+.createAccountBtn, .loginBtn, .contactButton {
+    width: 100%;
     padding: 12px 10px;
     margin-top: 5px;
     background-color: #fff;
@@ -93,7 +94,7 @@
     text-transform: uppercase;
 }
 
-.createAccountBtn:hover, .loginBtn:hover {
+.createAccountBtn:hover, .loginBtn:hover, .contactButton:hover {
     background-color: black;
     color: #fff;
     border: 1px solid black;
@@ -123,7 +124,7 @@
 .accountPolicy {
     font-size: 13px;
     color: black;
-    max-width: 320px;
+    max-width: 400px;
     text-align: center;
     margin-top: 15px;
 }
@@ -153,12 +154,18 @@
     width: 100%;
 }
 
-.loginAccount {
+.formContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.formContainer textarea {
+    resize: none;
 }
 
 
@@ -169,7 +176,7 @@
     position: relative;
     padding-left: 22px;
     font-size: 13px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .checkbox-wrapper-21 .control input {
     position: absolute;
