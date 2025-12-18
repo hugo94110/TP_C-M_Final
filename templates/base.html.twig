@@ -28,6 +28,11 @@
             </div>
             <div class="headerUser">
                 {% if app.user %}
+                    {% if 'ROLE_ADMIN' in app.user.roles %}
+                        <a href="{{ path('app_article_new') }}" class="btnAddArticle">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 12 12"><path d="m10.75,6.75H1.25c-.414,0-.75-.336-.75-.75s.336-.75.75-.75h9.5c.414,0,.75.336.75.75s-.336.75-.75.75Z" fill="rgba(0, 0, 0, 1)" stroke-width="0" data-color="color-2"></path><path d="m6,11.5c-.414,0-.75-.336-.75-.75V1.25c0-.414.336-.75.75-.75s.75.336.75.75v9.5c0,.414-.336.75-.75.75Z" stroke-width="0" fill="rgba(0, 0, 0, 1)"></path></svg>
+                        </a>
+                    {% endif %}
                     <a href="{{ path('app_profile') }}">Mon compte</a>
                 {% else %}
                     <a href="{{ path('app_login') }}">Se connecter</a>
