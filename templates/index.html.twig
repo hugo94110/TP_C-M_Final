@@ -29,8 +29,11 @@
             </a>
         {% endfor %}
     {% else %}
-        <p>Aucun produit disponible pour le moment.</p>
+        <div class="noArticles">
+            <p>Aucun produit disponible.</p>
+        </div>
     {% endif %}
+
 </div>
 
 {% endblock %}

@@ -67,6 +67,14 @@
     text-align: left;
 }
 
+.noArticles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    grid-column: 1 / -1;
+}
+
 /* .videoContainer {
     display: flex;
 
